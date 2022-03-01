@@ -64,24 +64,23 @@ class Animal():
     # and implement a method called sound() which prints the sound the animal typically makes
 
 
-class Cat(Animal):
-
+class Dog(Animal):
     def __init__(self, name):
-        self.name = name
+        Animal.__init__(self, name, "Dog")
+
+    def sound(self):
+        print("Wuff")
+
+
+class Cat(Animal):
+    def __init__(self, name):
+        Animal.__init__(self, name, "Cat")
 
     def sound(self):
         print("Meow")
 
-
-class Dog(Animal):
-    def __init__(self,name):
-        self.name = name
-    def sound(self):
-        print("RufF")
-
-
-cat1 = Cat('snickers')
-cat1.sound()
-
-dog1 = Dog('Buzz')
+dog1 = Dog("Brutus")
 dog1.sound()
+
+cat1 = Cat("snickers")
+cat1.sound()

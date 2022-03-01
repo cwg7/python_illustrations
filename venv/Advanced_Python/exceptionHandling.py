@@ -41,3 +41,5 @@ def divider(a,b):
 print(divider(1,0))
 
 divider(1,0)
+
+
